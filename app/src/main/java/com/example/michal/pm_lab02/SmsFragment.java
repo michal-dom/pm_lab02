@@ -52,15 +52,12 @@ public class SmsFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
         this.textView = (TextView) view.findViewById(R.id.sms_text);
         this.textView.setText(mParam1);
         this.textView2 = (TextView) view.findViewById(R.id.sms_num);
         this.textView2.setText(mParam2);
         return view;
     }
-
-
 
     @Override
     public void onAttach(Context context) {

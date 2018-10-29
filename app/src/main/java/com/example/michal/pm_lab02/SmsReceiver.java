@@ -18,9 +18,7 @@ import android.widget.Toast;
 public class SmsReceiver extends BroadcastReceiver {
 
     private static final String TAG = "SmsBroadcastReceiver";
-    private String test;
     private ScrollView scrollView;
-
     private Listener listener;
 
     public SmsReceiver( ){
@@ -37,10 +35,9 @@ public class SmsReceiver extends BroadcastReceiver {
         if (intent.getAction().equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) {
             String smsSender = "";
             String smsBody = "";
-            //
+
             for (SmsMessage smsMessage : Telephony.Sms.Intents.getMessagesFromIntent(intent)) {
                 smsBody += smsMessage.getMessageBody();
-
             }
 
             smsSender = Telephony.Sms.Intents.getMessagesFromIntent(intent)[0].getOriginatingAddress();
@@ -49,7 +46,6 @@ public class SmsReceiver extends BroadcastReceiver {
                 listener = (Listener)context;
                 listener.onSMSReceived(smsBody, smsSender);
                 Toast.makeText(context, smsSender + " " + smsBody, Toast.LENGTH_LONG).show();
-
             }else{
                 Toast.makeText(context, "first reciver", Toast.LENGTH_LONG).show();
             }
@@ -59,6 +55,5 @@ public class SmsReceiver extends BroadcastReceiver {
     public interface Listener{
         public void onSMSReceived(String text, String number);
     }
-
 
 }

@@ -47,13 +47,10 @@ public class SendFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
         this.textView1 = (TextView) view.findViewById(R.id.sms_send_num);
         this.textView1.setText(mParam2);
         this.textView2 = (TextView) view.findViewById(R.id.sms_send_text);
         this.textView2.setText(mParam1);
-
-
 
         return view;
     }
