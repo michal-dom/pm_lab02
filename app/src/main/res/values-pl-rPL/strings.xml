@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">pm_lab02</string>
+    <string name="action_ok">ok</string>
+    <string name="action_send_normal_sms">Wyślij normalnego SMSa</string>
+    <string name="phone_number_hint">912345678</string>
+    <string name="action_send_condition_sms">Send Condition SMS</string>
+    <string name="toast_sending_sms">Wysyłanie...</string>
+    <string name="permission_alert_dialog_title">Wymagane pozwolenie na SMSy</string>
+    <string name="permission_dialog_message">The app will now request your permission to send and read SMS related services.</string>
+    <string name="error_invalid_phone_number">Zły nr telefonu</string>
+    <string name="your_cellphone_number">"Numer: "</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
